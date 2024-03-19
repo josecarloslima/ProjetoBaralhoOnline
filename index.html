@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sorteador de Cartas 2.0</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card">
+            <div class="suit" id="suit"></div>
+            <div class="name" id="name"></div>
+            <div class="image-container">
+                <img src="./imagens/abertura.png" alt="Baralho de Cartas" id="cardImage" class="card-image">
+            </div>
+
+        </div>
+
+        <div class="button-container">
+            <button id="sortearButton" onclick="sortearCarta()">Sortear Carta</button>
+            <button id="novoMacoButton" onclick="atualizarPagina()">Novo Maço de Cartas</button>
+        </div>
+    </div>
+
+    <script src="baralho.js"></script>
+    <script src="main.js"></script>
+
+    <footer id="creditos">
+        <p>&copy; 2023 - José Carlos Lima</p>
+    </footer>
+</body>
+
+</html>
