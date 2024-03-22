@@ -1,3 +1,15 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Fascinate+Inline&family=Genos:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --cor01: #c39353;
+  --cor02: #2e6373ca;
+  --cor03: #32374b;
+
+  --fonte-destaque: "Fascinate Inline", system-ui;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,7 +17,11 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: antiquewhite; 
+  background-image: linear-gradient(to right, rgba(0, 128, 0, 0.196), var(--cor02));
+}
+
+h1 {
+  font-family: var(--fonte-destaque);
 }
 
 .container {
@@ -15,24 +31,25 @@ body {
 .card {
   width: 250px; /* Tamanho de uma carta de baralho */
   height: 350px;
-  background: linear-gradient(130deg, white 90%, #b47b42 10%);
-  border: 3px solid #000;
+  background-color: white;
+  border: 6px solid #000;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin: auto;
+  box-shadow: 5px 5px 3px black;
 }
 
 .suit {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--fonte-destaque);
 }
 
 .name {
   font-size: 5rem;
-  font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--fonte-destaque);
 }
 
 .card-image {
@@ -52,27 +69,34 @@ body {
 }
 
 button {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 0.9rem;
-  font-style: italic;
-  padding: 10px;
+  font-family: var(--fonte-destaque);
+  font-size: 1.5em;
+  padding: 5px;
   cursor: pointer;
   margin-top: 10px; /* Adiciona um espaço entre os botões */
-  background-color: rgba(180, 123, 66, 0.3);
-  border-left: double;
-  border-right: double;
-  box-shadow: 0 4px #999;
+  background-color: rgba(0, 128, 0, 0);
+  border: none;
+}
+
+button::before {
+  content: "[ ";
+  font-size: 1.5em;
+}
+
+button::after {
+  content: " ]";
+  font-size: 1.5em;
 }
 
 button:hover {
-  background-color: #b47b42;
+  color: var(--cor01);
+  text-shadow: 2px 2px 5px white;
+  transition: 0.5s;
 }
 
 button:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(6px);
 }
-
 
 .name-container {
   display: flex;
@@ -100,4 +124,3 @@ button:active {
 img[src='./imagens/abertura.png'] {
   width: 100%; 
 }
-
